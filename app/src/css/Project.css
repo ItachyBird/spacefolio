@@ -1,0 +1,281 @@
+.project-container {
+  overflow: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.gitbutton{
+  margin-top: 2vw;
+  width: 4vw;
+  height: 2vw;
+  border-radius: 6px;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  
+} 
+
+.gitbutton:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer; 
+}
+
+.scrolling-wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  white-space: nowrap;
+  padding: 2vh;
+  width: 66vw;
+  margin: 0 auto;
+  height: auto;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.front-info h3{
+  font-weight: bold;
+  padding-bottom: 1vh;
+}
+
+.front-info p{
+  font-size: 1.7vh;
+}
+
+.project-card {
+  min-width: 20vw;
+  height: 50vh;
+  margin-right: 2vw;
+  border-radius: 1.2vw;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+  display: flex;
+  border: 1px solid white;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.project-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  word-wrap: break-word;
+  white-space: normal;
+  border-radius: 1.2vw;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1.2vw;
+  text-align: center;
+  overflow: auto;
+  word-wrap: break-word;
+  white-space: normal;
+  padding: 2vh;
+  box-sizing: border-box;
+}
+
+.card-back::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card-back::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-back::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.card-back::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.card-back {
+  transform: rotateY(180deg) translateZ(1px); /* Adding translateZ can sometimes help with blurriness */
+  backdrop-filter: blur(40px);
+
+  will-change: transform;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.front-pic{
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.front-info{
+  width: 100%;
+  text-align: center;
+  height: 50%;
+  font-size: 2vh;
+  padding: 2vh;
+  color: white;
+  background-color: transparent;
+}
+
+.detail-box {
+  width: 90%;
+  height: 80%;
+  background: #fefefe;
+  border-radius: 1vw;
+  box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-back p {
+  margin: 0;
+  font-size: 1vw;
+  color: rgb(255, 255, 255);
+  word-wrap: break-word;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.2vw;
+  color: #ffffff;
+}
+
+.scroll-button {
+  font-size: 4vh;
+  color: white;
+}
+
+.scroll-button.left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scroll-button.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.projecthead{
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.6),
+               0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 576px) {
+  .scrolling-wrapper {
+    width: 100vw;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .project-card {
+    width: 70vw;
+    height: 60vh;
+    margin-bottom: 2vh;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .font-info, .detail-box {
+    font-size: 1.2rem;
+  }
+
+  .scroll-button {
+    display: none;
+  }
+
+  .card-back p {
+    font-size: 0.8rem;
+  }
+
+  .front-pic {
+    width: 100%;
+    height: 38vh;
+  }
+  
+  .font-info {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-back p {
+    font-size: 2vh;
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+  }
+
+  .gitbutton{
+    margin-top: 2vh;
+    width: 10vh;
+    height: 6vh;
+    border-radius: 6px;
+    border: 2px solid white;
+    color: white;
+    font-size: 0.8rem;
+  } 
+}

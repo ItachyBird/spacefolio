@@ -1,0 +1,156 @@
+@font-face {
+  font-family: z;
+  src: url(./assets/font2.ttf);
+}
+
+.app-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;  /* Prevent scrollbars */
+  background-color: black;
+  z-index: 1; /* Ensure canvas is behind content */
+}
+
+  .content {
+    position: relative;
+    /* Adjust this based on your header height */
+    left: 0;
+    width: 80%; /* Adjust the width as needed */
+    height: calc(100vh - 50px ); /* Fixed height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    box-sizing: border-box; /* Include borders in height calculation */
+    
+    z-index: 2;
+    padding: 10px;
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+.content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.page {
+  width: 100%;
+  min-height: 100%; /* Minimum height for each page */
+  flex-grow: 1; /* Allow the page to grow if needed */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+
+  box-sizing: border-box;
+  padding: 20px; /* Add padding if needed */
+  overflow: auto; /* Allow scrolling if needed */
+  border-top: 2px solid white;
+}
+
+.page1 {
+  width: 100%;
+  min-height: 100%; /* Minimum height for each page */
+  flex-grow: 1; /* Allow the page to grow if needed */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px; /* Add padding if needed */
+  margin-top: -2vw;
+  border-top: 2px solid white;
+}
+
+.page::-webkit-scrollbar,
+.page1::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.projecthead{
+  text-align: center;
+  font-size: 2rem;
+ margin-top: 10vh;
+  height: auto;
+}
+
+.portf {
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  font-size: 2rem;
+  font-family: z;
+  text-shadow: 0 0 5px rgb(255, 255, 255), 
+               0 0 10px rgba(255, 255, 255, 0.5), 
+               0 0 15px rgba(255, 255, 255, 0.5), 
+               0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+    top: 5vh; /* Adjust top spacing for smaller screens */
+  }
+}
+
+.header {
+  z-index: 3; /* Make sure the header is above both the canvas and content */
+}
+
+/* Optional: Make sure the content area doesn't scroll the whole page */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent page scrolling */
+}
+
+
+@media (max-width: 600px) {
+  .page1 {
+    width: 100%;
+    min-height: 100%; /* Minimum height for each page */
+    flex-grow: 1; /* Allow the page to grow if needed */
+    display: flex;
+    align-items: start; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    
+    box-sizing: border-box;
+    padding: 20px; /* Add padding if needed */
+    overflow: auto;
+    
+  }
+}

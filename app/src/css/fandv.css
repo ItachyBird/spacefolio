@@ -1,0 +1,54 @@
+@font-face {
+  font-family: font1;
+  src: url(../assets/font3.otf);
+}
+.fandvwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.top-text {
+  position: absolute;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevent the text from blocking clicks */
+  z-index: 2; /* Ensures it stays above the video */
+  font-family: font1;
+  font-size: 2rem;
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevent the text from blocking clicks */
+}
+
+.fandvwrap:hover .hover-text,
+.fandvwrap:hover .top-text {
+  opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+
+  .top-text {
+    font-size: 1rem;
+  }
+}

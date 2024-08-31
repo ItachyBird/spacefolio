@@ -1,0 +1,115 @@
+/* Medoc.css */
+
+/* Container for the entire Medoc section */
+.medocwrap {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Add positioning context for the child elements */
+}
+
+.leftmedoc {
+    height: 100%;
+    color: white;
+    width: 70%;
+    float: left; /* Aligns .leftmedoc to the left */
+    padding: 2vw;
+    padding-top: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Background Blur */
+    background: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+    backdrop-filter: blur(40px); /* Adjust blur level as needed */
+    
+    /* White Glowing Border */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* White border with some transparency */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow around the border */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.rightmedoc {
+    height: 100%;
+    width: 30%;
+    float: right; /* Aligns .rightmedoc to the right */
+}
+
+.infoheadmedoc {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1vh;
+}
+
+.myprofilepic {
+    width: 10vw;
+    height: 40vh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    /* Aligns image to the top of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: flex-start; /* Aligns items to the top */
+    overflow: hidden; /* Ensures no overflow */
+}
+
+/* Profile picture styling */
+.myprofilepic img {
+    width: 100%; /* Makes the image fit the container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Styling for the heading in the left side */
+.headmedoc {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4); /* Creates the white glow effect */
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .medocwrap {
+        display: flex;
+        flex-direction: column; /* Stack .leftmedoc and .rightmedoc vertically */
+    }
+
+    .leftmedoc, .rightmedoc {
+        width: 100%; /* Both take full width */
+        float: none; /* Remove float, as they stack vertically */
+        padding: 2vw 0; /* Adjust padding to be responsive */
+        height: auto;
+        font-size: 4vw;
+    }
+
+    .rightmedoc {
+        margin-top: 1rem; /* Add some space between stacked elements */
+        height: 90vh; /* Optional: Reduce canvas height for mobile */
+    }
+
+    .rightmedoc canvas {
+        height: 90vh; /* Optional: Reduce canvas height for mobile */
+    }
+
+    .headmedoc {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .infoheadmedoc {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .myprofilepic {
+        width: 20vh; /* Adjust width for mobile */
+        height: 20vh; /* Adjust height for mobile */
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        /* Removed border-radius to keep it rectangular */
+    }
+}

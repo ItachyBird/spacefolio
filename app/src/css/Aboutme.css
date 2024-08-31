@@ -1,0 +1,123 @@
+@font-face {
+  font-family: newf;
+  src: url(../assets/font2.ttf);
+}
+.aboutme {
+  position: relative;
+  top: 15vh; /* Position slightly below the center */
+  width: 100%; /* Adjust the width as needed */
+  font-family: font1;
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Padding inside the About section */
+  font-size: 2rem;
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text */
+  color: white;
+  
+}
+
+/* No glow effect for "Hi, I am" */
+.static-text {
+  text-shadow: none; /* Ensure no glow on "Hi, I am" */
+}
+
+/* Glowing effect for the name "SOUMYADIP Debnath" */
+
+
+/* Glowing effect for the professions */
+.profession {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+/* Style for the "Get in touch with me" text */
+.line3 {
+  font-size: 1rem; /* Smaller font size */
+  margin-top: 2vw; /* Adjust spacing if needed */
+  color:rgba(255, 255, 255, 0.493);
+}
+
+
+.line3 {
+  font-size: 1rem; /* Smaller font size */
+  margin-top: 2vw; /* Adjust spacing if needed */
+}
+
+/* Social Icons styling */
+.social-icons {
+  display: flex;
+  align-items: center; /* Center icons horizontally */
+  gap: 10px; /* Space between icons */
+  margin-top: 20px; /* Space above icons */
+  border-radius: 50%;
+}
+
+.social-icons a {
+  color: rgb(255, 255, 255); /* Icon color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.5rem; /* Adjust icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+  border-radius: 50%; /* Make the icons round */
+
+ 
+  transition: color 0.3s ease-in-out, 
+              text-shadow 0.3s ease-in-out, 
+              background-color 0.3s ease-in-out, 
+              box-shadow 0.3s ease-in-out,
+              transform 0.3s ease-in-out; /* Smooth transition for all effects */
+}
+
+/* Flow effect for the icons */
+.social-icons a {
+  animation: flow 3s infinite; /* Apply flow animation */
+}
+
+/* Keyframes for the flow effect */
+@keyframes flow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Slight upward movement */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Glowing effect and transform on hover */
+.social-icons a:hover {
+  color: white; /* Icon color on hover */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+               0 0 12px rgba(255, 255, 255, 0.8), 
+               0 0 16px rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Brighter border on hover */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+              0 0 12px rgba(255, 255, 255, 0.8), 
+              0 0 16px rgba(255, 255, 255, 0.8); /* Glowing effect on border */
+  transform: scale(1.1) translateY(-3px); /* Scale and move the icon on hover */
+}
+
+/* Media query adjustments */
+@media only screen and (max-width: 768px) {
+  .aboutme {
+    top: 10vh; /* Move the About section further down on mobile devices */
+    font-size: 1rem;
+  }
+
+  .line3 {
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+
+  .social-icons a {
+    font-size: 1rem; /* Smaller icon size for mobile */
+  }
+}
