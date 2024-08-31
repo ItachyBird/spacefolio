@@ -8,7 +8,7 @@
 }
 
 .leftmedoc {
-    height: 100%;
+    height: auto;
     color: white;
     width: 70%;
     float: left; /* Aligns .leftmedoc to the left */
