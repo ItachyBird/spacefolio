@@ -45,8 +45,8 @@
 .myprofilepic {
     width: 10vw;
     height: 40vh;
-    margin-top: 10vh;
-    margin-bottom: 5vh;
+    margin-top: 5vh;
+    
     /* Aligns image to the top of the container */
     display: flex;
     flex-direction: column;
@@ -113,3 +113,37 @@
         /* Removed border-radius to keep it rectangular */
     }
 }
+
+
+.scroll-button {
+    position: absolute;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .up-button {
+    top: 50%;
+    left:2%;
+  }
+  
+  .down-button {
+    top: 52%; /* Adjust spacing between buttons as needed */
+    left: 2%;
+  }
+  
+  /* Media query for hiding buttons on screens larger than 600px */
+  @media (min-width: 601px) {
+    .scroll-button {
+      display: none;
+    }
+  }
+  
