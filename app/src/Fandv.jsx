@@ -16,7 +16,7 @@ const Fandv = () => {
 
   return (
     <div className='fandvwrap' onClick={handlePlayPause} style={{ cursor: 'pointer' }}>
-      <div className='top-text'>"Think outside the box? I didn’t even know there was a box."</div>
+      <div className='top-text'>" I didn’t even know there was a box."</div>
       <video ref={videoRef} src="/carvideo.mp4" playsInline>
         Your browser does not support the video tag.
       </video>
