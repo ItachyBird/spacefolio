@@ -40,7 +40,7 @@ const projectDetails = [
     image: p8,
     shortDesc: "A dynamic portfolio website built with React and Vite, featuring interactive 3D models, animations, and modern design elements. The site utilizes libraries like react-three for 3D effects, GSAP for animations, and Tailwind CSS for styling." ,
     details: "This project is a portfolio website designed to showcase personal or professional work with a modern and interactive user experience. The site leverages a range of advanced web technologies and libraries to create an engaging and visually appealing presentation.",
-    link:"https://github.com/ItachyBird/apple_clone",
+    link:"https://github.com/ItachyBird/spacefolio",
   },
 
   {
