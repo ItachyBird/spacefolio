@@ -51,6 +51,35 @@
 .content::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
 }
+.pageabout {
+  width: 100%;
+  min-height: 100%; /* Minimum height for each page */
+  flex-grow: 1; /* Allow the page to grow if needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+
+
+  box-sizing: border-box;
+  padding: 20px; /* Add padding if needed */
+  overflow: auto; /* Allow scrolling if needed */
+  border-top: 2px solid white;
+}
+
+.portf {
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  font-size: 2rem;
+  font-family: z;
+  text-shadow: 0 0 5px rgb(255, 255, 255), 
+               0 0 10px rgba(255, 255, 255, 0.5), 
+               0 0 15px rgba(255, 255, 255, 0.5), 
+               0 0 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 10vw;
+}
+
 
 .page {
   width: 100%;
@@ -92,18 +121,7 @@
   height: auto;
 }
 
-.portf {
-  color: white;
-  width: 100%;
-  text-align: center;
-  margin-top: 0;
-  font-size: 2rem;
-  font-family: z;
-  text-shadow: 0 0 5px rgb(255, 255, 255), 
-               0 0 10px rgba(255, 255, 255, 0.5), 
-               0 0 15px rgba(255, 255, 255, 0.5), 
-               0 0 20px rgba(255, 255, 255, 0.5);
-}
+
 
 
 
@@ -152,5 +170,12 @@ html, body {
     padding: 20px; /* Add padding if needed */
     overflow: auto;
     
+  }
+  .portf{
+  margin-bottom: 15vh;
+ 
+  }
+  .pageabout{
+    overflow: hidden;
   }
 }
