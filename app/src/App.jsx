@@ -26,15 +26,15 @@ function App() {
         </Canvas>
       </div>
       <div className="content">
-        <div className='portf'>WELCOME TO MY PORTFOLIO</div>
+       
         
-        <div id="about" className="page">
+        <div id="about" className="pageabout"> <div className='portf'>WELCOME TO MY PORTFOLIO</div>
           <Aboutme />
         </div>
-        <div className="page">
+        <div id="medoc" className="page">
           <Medoc />
         </div>
-        <div className="page">
+        <div id="techstack" className="page">
           <Techstack />
         </div>
 
