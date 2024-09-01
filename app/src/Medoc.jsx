@@ -27,7 +27,7 @@ const Model3D = () => {
 const Medoc = () => {
   return (
     <div className='medocwrap'>
-      <div className='leftmedoc'>
+      <div id='medoctop' className='leftmedoc'>
         <div className='headmedoc'>KNOW ABOUT ME</div>
         <div className='infoheadmedoc'>
           <p>Hey there, I’m Soumyadip Debnath, a student on a quest to master the art of coding, web development, and blockchain technology. Just like in any tactical challenge where precision and strategy are key, I bring a calculated approach to my work, blending creativity with technical skill.</p>
@@ -104,7 +104,7 @@ const Medoc = () => {
 
         {/* Buttons on top of the canvas */}
         <a 
-          href="#projects" 
+          href="#medoctop" 
           className='scroll-button up-button'
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
