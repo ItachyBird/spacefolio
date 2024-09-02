@@ -7,8 +7,9 @@
     color: #fff;
     padding: 1rem;
     text-align: center;
-    z-index: 10; /* Ensure header is above the canvas */
+    z-index: 200; /* Ensure header is above the canvas */
     font-family: 'a';
+    background-color: black;
   }
   
   .nav {
