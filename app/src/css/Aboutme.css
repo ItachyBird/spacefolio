@@ -109,7 +109,7 @@
 /* Media query adjustments */
 @media only screen and (max-width: 768px) {
   .aboutme {
-    top: 10vh; /* Move the About section further down on mobile devices */
+    top: 30vh; /* Move the About section further down on mobile devices */
     font-size: 1rem;
   }
 
