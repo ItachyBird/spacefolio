@@ -4,7 +4,7 @@
 }
 .aboutme {
   position: relative;
-  top: 25vh; /* Position slightly below the center */
+  top: 15vh; /* Position slightly below the center */
   width: 100%; /* Adjust the width as needed */
   font-family: font1;
   margin: 0 auto; /* Center the content horizontally */
