@@ -27,8 +27,8 @@ function App() {
       </div>
       <div className="content">
        
-        
-        <div id="about" className="pageabout"> <div className='portf'>WELCOME TO MY PORTFOLIO</div>
+        <div id="about"  className='portf'>WELCOME TO MY PORTFOLIO</div>
+        <div className="pageabout"> 
           <Aboutme />
         </div>
         <div id="medoc" className="page">
