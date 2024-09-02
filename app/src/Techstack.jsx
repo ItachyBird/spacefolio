@@ -60,7 +60,7 @@ const Techstack = () => {
   return (
     <div className='wraptechpage'>
       <div className="t">TECH STACK
-      <div className='t-text'>Click to Play the Video</div>
+      <div className='t-text'>Click to see the tech stacks</div>
       </div>
       <div className="techstack" onClick={handleClick}>
         <div className="central-text">
