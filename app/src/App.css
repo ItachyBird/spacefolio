@@ -63,7 +63,7 @@
   box-sizing: border-box;
   padding: 20px; /* Add padding if needed */
   overflow: auto; /* Allow scrolling if needed */
-  border-top: 2px solid white;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .portf {
