@@ -219,7 +219,7 @@
                0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .scrolling-wrapper {
     width: 100vw;
     height: auto;
